@@ -8,3 +8,17 @@ Ans:- 1. Check if bash is installed:
 The above points not found, we need to use, alternative shell.
       **1. Alternative shell: If bash is not available, try using another shell like sh or dash:
         # sudo /bin/bash  - these command will open shell , then we need to install shell by using above commands. 
+
+NTP Troubleshooting:
+
+# timedatectl 
+# chronyc sources - for which time server communicating
+  + or - or * for working and ? for not working 
+# vi /etc/chrony.conf
+# vi /etc/chrony/chrony.conf
+# vi /etc/systemd/timesync.conf
+# systemctl status chronyd.conf
+# systemct status systemd-timesync.service
+# timedatectl set-ntp true - to enable active ntp
+# if not communicating, we need verify for connectivity like routing etc.
+
